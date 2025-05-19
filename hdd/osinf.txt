@@ -1,4 +1,0 @@
-enabled=1
-bootdir=!_root!\!bootdev!
-bootfile=osloader.bat
-bootarg=
