@@ -1,4 +1,4 @@
-# Beta 1.0 features:
+# Beta 2.0 features:
 
 ## Boot selector
 
