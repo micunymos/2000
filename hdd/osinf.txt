@@ -1,0 +1,4 @@
+enabled=1
+bootdir=!_root!\!bootdev!
+bootfile=start.bat
+bootarg=

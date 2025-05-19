@@ -1,0 +1,4 @@
+DEVNAME Local_Disk
+DEVTYPE Hard_Disk_Drive
+DEVNUM 0
+DEVLIB HDD
