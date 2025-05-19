@@ -1,0 +1,2 @@
+cd %prevcd%
+cmd.exe
