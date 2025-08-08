@@ -1,4 +1,4 @@
-# Beta 2.0 features:
+# Beta 2.1 features:
 
 ## Boot selector
 
@@ -104,3 +104,4 @@ This may be useful, if You want to modify the BIOS in any way that requires addi
 # Earlier Windows consoles do not support ANSI escape sequences, which are critical for this software to work properly.
 
 # For this exact reason, the software does not support the "Use legacy console" option.
+
