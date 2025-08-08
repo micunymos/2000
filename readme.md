@@ -27,18 +27,18 @@ fdd3
 
 If You need a bootable drive, simply insert this into osinf.txt:
 
-`enabled=1`
-`bootdir=%_root%\%bootdev%`
+`enabled=1`    
+`bootdir=%_root%\%bootdev%`    
 `bootfile=start.bat`
 
 And just insert `exit /b` into start.bat at the root of Your drive.
 
 The important file is deviceinfo.txt. It contains at the very least:
 
-`DEVNAME *Device name with quotes*`
-`DEVTYPE *Device category without spaces in it*`
-`DEVNUM *The number of the device from 1-12*` - We will automate this in Beta 2.
-`DEVLIB *The directory relative to the root at which the device is located*` - We will automate this too.
+`DEVNAME *Device name with quotes*`    
+`DEVTYPE *Device category without spaces in it*`    
+`DEVNUM *The number of the device from 1-12*` - We will automate this in a later Beta version.    
+`DEVLIB *The directory relative to the root at which the device is located*` - We will automate this too.    
 
 And You can insert more device-specific information that will all be set as environment variables by the BIOS.
 
@@ -102,4 +102,5 @@ This may be useful, if You want to modify the BIOS in any way that requires addi
 
 # Note: This software was only tested to run on Windows 10/11.
 # Earlier Windows consoles do not support ANSI escape sequences, which are critical for this software to work properly.
+
 # For this exact reason, the software does not support the "Use legacy console" option.
