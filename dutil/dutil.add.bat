@@ -45,6 +45,16 @@ if /i %ADD:~0,3%==hdd set devtypeX=HDD
 if /i %ADD:~0,3%==usb set devtypeX=USB
 if /i %ADD:~0,3%==fdd set devtypeX=FDD
 echo DEVTYPE %DEVTYPEX% >> %add%\deviceinfo.txt
+if %devtypeX%==HDD set devnumX=0
+if %devtypeX%==USB set devnumX=4
+if %devtypeX%==FDD set devnumX=8
+set temp=%ADD:~3,1%
+if /i "%temp%" equ "" set /a devnumX+=0
+if /i "%temp%" equ "1" set /a devnumX+=1
+if /i "%temp%" equ "2" set /a devnumX+=2
+if /i "%temp%" equ "3" set /a devnumX+=3
+echo DEVNUM %DEVNUMX% >> %add%\deviceinfo.txt
+echo DEVLIB %add% >> %add%\deviceinfo.txt
 echo [Disk Utility] Finished creating new device information file.
 if not exist %add%\start.bat (if not exist %add%\osloader.bat (echo [Disk Utility] This device is not bootable. )) ELSE (echo [Disk Utility] This device contains the original bootloader.)
 echo [Disk Utility] Finished creating device _root\%add%.

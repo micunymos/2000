@@ -10,9 +10,11 @@ if not defined boot goto eof
 if not exist %boot% echo [Disk Utility] The disk %boot% couldn't be found. &&goto eof
 echo [Disk Utility] Making %boot% bootable . . .
 echo [Disk Utility] Creating boot files . . .
+if exist %boot%\start.bat del %boot%\start.bat
 echo ^@echo off>>%boot%\start.bat
 echo setlocal enabledelayedexpansion>>%boot%\start.bat
 echo call MNDOS^\micunymos.bat>>%boot%\start.bat
+if exist %boot%\osloader.bat del %boot%\osloader.bat
 echo ^@echo off>>%boot%\osloader.bat
 echo setlocal enabledelayedexpansion>>%boot%\osloader.bat
 echo MNDOS^\micunymos.bat>>%boot%\osloader.bat
@@ -23,7 +25,7 @@ if %errorlevel%==1 (
 	md %boot%\MNDOS
 	echo echo This program was not configured.>%boot%\MNDOS\micunymos.bat
 	echo echo You may press any key to exit this program, and shut down.>>%boot%\MNDOS\micunymos.bat
-	echo pause^>nul>%boot%\MNDOS\micunymos.bat
+	echo pause ^>nul>%boot%\MNDOS\micunymos.bat
 	echo [Disk Utility] Finished making %boot% bootable.
 	goto eof
 )

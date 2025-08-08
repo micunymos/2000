@@ -128,6 +128,8 @@ if /i not "%*" equ "" goto runcmd
 	goto run
 :run
 	call dutil\%launch%
+	echo [Disk Utility] Returned from the operation. Press any key to proceed.
+	pause >nul
 	if %utilloop%==1 goto utilloop
 	goto eof
 :help

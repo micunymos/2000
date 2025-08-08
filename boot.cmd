@@ -1,7 +1,6 @@
 @echo off
 setlocal EnableDelayedExpansion
 cd /d %~dp0
-type %0
 set _root=%cd%
 set bootfrom=0
 set bootarg=0

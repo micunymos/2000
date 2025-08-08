@@ -1,4 +1,8 @@
 @echo off
+cd %~dp0..\..\ram
+set _sysmem="%cd%"
+cd %~dp0..
+set _bios="cd"
 cd %~dp0
 setlocal EnableDelayedExpansion
 set r=38;2;255;63;63m

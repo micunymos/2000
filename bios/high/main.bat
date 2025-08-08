@@ -41,7 +41,10 @@ set m=8;2;255;63;255m
 		echo [[3%b%VERBOSE BOOT[0m] Parametres: %*
 		echo [[3%b%VERBOSE BOOT[0m] Initialising boot devices . . .
 	)
-	goto bootdev
+	echo [7mPress CTRL+C to select a boot device![0m
+	timeout /t 5 /nobreak >nul
+	if not %errorlevel%==0 goto bootdev
+	goto defaultdev
 :is
 	set loop=18
 	set h=11
@@ -74,7 +77,7 @@ set m=8;2;255;63;255m
 		echo [%h%;%v%H                                                 
 	)
 	if %loop%==1 (
-		echo [%h%;%v%H[4m                                                 
+		echo [%h%;%v%H[4m                                                 [0m
 	)
 	set /a h=%h%+1
 	set /a loop=%loop%-1
@@ -153,7 +156,7 @@ set m=8;2;255;63;255m
 		echo [%h%;%v%H                                                 
 	)
 	if %loop%==1 (
-		echo [%h%;%v%H[4m                                                 
+		echo [%h%;%v%H[4m                                                 [0m
 	)
 	set /a h=%h%+1
 	set /a loop=%loop%-1
@@ -285,7 +288,7 @@ set m=8;2;255;63;255m
 		echo [%h%;%v%H                                                 
 	)
 	if %loop%==1 (
-		echo [%h%;%v%H[4m                                                 
+		echo [%h%;%v%H[4m                                                 [0m
 	)
 	set /a h=%h%+1
 	set /a loop=%loop%-1
@@ -329,7 +332,7 @@ set m=8;2;255;63;255m
 		echo [%h%;%v%H                                                 
 	)
 	if %loop%==1 (
-		echo [%h%;%v%H[4m                                                 
+		echo [%h%;%v%H[4m                                                 [0m
 	)
 	set /a h=%h%+1
 	set /a loop=%loop%-1
@@ -398,7 +401,7 @@ set m=8;2;255;63;255m
 		echo [%h%;%v%H                                                 
 	)
 	if %loop%==1 (
-		echo [%h%;%v%H[4m                                                 
+		echo [%h%;%v%H[4m                                                 [0m
 	)
 	set /a h=%h%+1
 	set /a loop=%loop%-1
@@ -467,7 +470,7 @@ set m=8;2;255;63;255m
 		echo [%h%;%v%H                                                 
 	)
 	if %loop%==1 (
-		echo [%h%;%v%H[4m                                                 
+		echo [%h%;%v%H[4m                                                 [0m
 	)
 	set /a h=%h%+1
 	set /a loop=%loop%-1
@@ -536,7 +539,7 @@ set m=8;2;255;63;255m
 		echo [%h%;%v%H                                                 
 	)
 	if %loop%==1 (
-		echo [%h%;%v%H[4m                                                 
+		echo [%h%;%v%H[4m                                                 [0m
 	)
 	set /a h=%h%+1
 	set /a loop=%loop%-1
@@ -605,7 +608,7 @@ set m=8;2;255;63;255m
 		echo [%h%;%v%H                                                 
 	)
 	if %loop%==1 (
-		echo [%h%;%v%H[4m                                                 
+		echo [%h%;%v%H[4m                                                 [0m
 	)
 	set /a h=%h%+1
 	set /a loop=%loop%-1
@@ -674,7 +677,7 @@ set m=8;2;255;63;255m
 		echo [%h%;%v%H                                                 
 	)
 	if %loop%==1 (
-		echo [%h%;%v%H[4m                                                 
+		echo [%h%;%v%H[4m                                                 [0m
 	)
 	set /a h=%h%+1
 	set /a loop=%loop%-1
@@ -743,7 +746,7 @@ set m=8;2;255;63;255m
 		echo [%h%;%v%H                                                 
 	)
 	if %loop%==1 (
-		echo [%h%;%v%H[4m                                                 
+		echo [%h%;%v%H[4m                                                 [0m
 	)
 	set /a h=%h%+1
 	set /a loop=%loop%-1
@@ -812,7 +815,7 @@ set m=8;2;255;63;255m
 		echo [%h%;%v%H                                                 
 	)
 	if %loop%==1 (
-		echo [%h%;%v%H[4m                                                 
+		echo [%h%;%v%H[4m                                                 [0m
 	)
 	set /a h=%h%+1
 	set /a loop=%loop%-1
@@ -881,7 +884,7 @@ set m=8;2;255;63;255m
 		echo [%h%;%v%H                                                 
 	)
 	if %loop%==1 (
-		echo [%h%;%v%H[4m                                                 
+		echo [%h%;%v%H[4m                                                 [0m
 	)
 	set /a h=%h%+1
 	set /a loop=%loop%-1
@@ -950,7 +953,7 @@ set m=8;2;255;63;255m
 		echo [%h%;%v%H                                                 
 	)
 	if %loop%==1 (
-		echo [%h%;%v%H[4m                                                 
+		echo [%h%;%v%H[4m                                                 [0m
 	)
 	set /a h=%h%+1
 	set /a loop=%loop%-1
@@ -1019,7 +1022,7 @@ set m=8;2;255;63;255m
 		echo [%h%;%v%H                                                 
 	)
 	if %loop%==1 (
-		echo [%h%;%v%H[4m                                                 
+		echo [%h%;%v%H[4m                                                 [0m
 	)
 	set /a h=%h%+1
 	set /a loop=%loop%-1
@@ -1088,7 +1091,7 @@ set m=8;2;255;63;255m
 		echo [%h%;%v%H                                                 
 	)
 	if %loop%==1 (
-		echo [%h%;%v%H[4m                                                 
+		echo [%h%;%v%H[4m                                                 [0m
 	)
 	set /a h=%h%+1
 	set /a loop=%loop%-1
@@ -1139,6 +1142,28 @@ set m=8;2;255;63;255m
 		set bootdev=11
 		goto preboot
 	)
+:defaultdev
+	cd %_root%
+	if exist default set /p bootdev=<default
+	if not exist default (
+		echo The default boot device is not set. To set it, enter a device folder into the file "default", with no extensions.
+		echo [0m[[3%y%WARN[0m] System halted.
+		goto halt
+	)
+	if not exist %bootdev% (
+		echo The default boot device does not exist. To set another one, enter a device folder into the file "default", with no extensions.
+		echo [0m[[3%y%WARN[0m] System halted.
+		goto halt
+	)
+	for /f "tokens=1,2" %%a in (%bootdev%\deviceinfo.txt) do (
+		if %%a==DEVNUM set DEVNUM%%b=%%b
+	)
+	for /f "tokens=1,2" %%a in (%bootdev%\deviceinfo.txt) do (
+		set %%a%DEVNUM%=%%b
+	)
+	set DEVNUM=
+	set bootdev=!DEVNUM%DEVNUM%!
+	goto preboot
 :preboot
 	set mncmdln=%_root%\bios\high\boot.bat /bootdev !DEVLIB%bootdev%!
 	if %verbose%==1 set mncmdln=%mncmdln% /verbose
@@ -1152,6 +1177,7 @@ set m=8;2;255;63;255m
 	set DEVNUM!count!=
 	set DEVLIB!count!=
 	set /a count+=1
+	goto verypreboot
 :boot
 	%mncmdln%
 	goto halt
